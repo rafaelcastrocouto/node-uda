@@ -3,22 +3,22 @@
 `input.json` _via_ POST
 ```
 {
-  github: "username",
-  facebook: "username",
-  instagram: "username"
+  "github": "username",
+  "twitter": "username",
+  "instagram": "username"
 }
 ```
 `output.json`
 ```
-{
-  usernames: ["username", "user", "name"],
-  platforms: ["github", "facebook", "instagram"],
-  decriptions: ["im cool"],
-  links: ["www.url.com"],
-  avatar: "link.to.img",
-  followers: 123,
-  etc...
-}
+{[
+  {"github":
+    {"login":"username","id":99999,"node_id":"ABCDEF","avatar_url":"http://avatar", ..."}
+  },
+  { "twitter":
+    {"id":99999, "name":"username","screen_name":"screenname", ...}
+  },
+  { "instagram": {"id": 999, ...} }
+]}
 ```
 
 ### todo list:
@@ -26,7 +26,11 @@
 -  ☑️ fetch data
 -  ☑️ async fetches
 -  ☑️ parse json
--  ❎ receive input requests
--  ❎ output aggregated json
--  ❎ use external platform files
+-  ☑️ receive input requests
+-  ☑️ output aggregated json
+-  ☑️ use external platform files
+-  ☑️ online demo
 -  ❎ more platforms
+-  ❎ validate input
+-  ❎ output filters
+-  ❎ cors options
