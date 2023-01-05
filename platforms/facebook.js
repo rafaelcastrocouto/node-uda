@@ -2,11 +2,13 @@ const fetch = require('node-fetch');
 
 const key = process.env['facebook'];
 
+const facebookId = process.env['facebookId'];
+
 const Facebook = require('facebook-node-sdk');
 //https://github.com/amachang/facebook-node-sdk
 
 const facebook = new Facebook({
-  appID: '836088124139162',
+  appID: facebookId.toString(),
   secret: key.toString()
 });
 // https://developers.facebook.com/docs/graph-api/reference/user/
