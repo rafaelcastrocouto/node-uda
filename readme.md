@@ -34,3 +34,5 @@
 -  ❎ validate input
 -  ❎ output filters
 -  ❎ cors options
+
+* no user data is stored in this project
